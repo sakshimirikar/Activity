@@ -32,10 +32,10 @@ public class MergeArrays {
 		System.out.println("Merged Array : ");
 		
 			
-     //System.arraycopy(object src , int srcPos ,Object desPos , int length)
-			System.arraycopy(arr1, 0, merged, 0, len1);
-			System.arraycopy(arr2, 0 , merged, len1 , len2);
-			System.out.println(Arrays.toString(merged));
+      //System.arraycopy(object src , int srcPos ,Object desPos , int length)
+	       System.arraycopy(arr1, 0, merged, 0, len1);
+	       System.arraycopy(arr2, 0 , merged, len1 , len2);
+	       System.out.println(Arrays.toString(merged));
 			 
 			
 	  //arraycopy -  method of System class which belongs to java.lang package. 
