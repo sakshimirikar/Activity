@@ -12,7 +12,7 @@ public class BookMain {
 		System.out.println("Welcome to our Book Management System");
 		
 		do {
-			System.out.println("Press \n 1 To Create Book \n 2 To Get All Book Details \n 3 To Get Book Details using Id \n 4. To Get Book Details using Name \n 5. To exit  ");
+			System.out.println("Press \n 1 To Create Book \n 2 To Get All Book Details \n 3 To Get Book Details using Id \n 4. To Get Book Details using Name \n 5. To Update Book \n 6. Exit  ");
 			System.out.println("---------------------------------------------------");
 			System.out.println("Enter your choice : ");
 			int choice = sc.nextInt();
@@ -22,7 +22,7 @@ public class BookMain {
 			case 1:
 				bservice.createBook();
 				System.out.println();
-                break;
+                                break;
 				
 			case 2 :
 				bservice.getAllBookDetails();
@@ -40,13 +40,18 @@ public class BookMain {
 				System.out.println();
 				break;
 				
-			case 5:
+			case 5 :
+				bservice.bookUpdate();
+			
+				
+			case 6:
+				System.out.println("Thanks for visiting !");
 				System.exit(0);
 			
 			default:
-				System.out.println("Please enter valid input!");
-				
-				
+				System.out.println("You entered wrong choice !");	
+			
+			
 			}
 			
 		
@@ -54,8 +59,8 @@ public class BookMain {
 		while(true);	
 	}
 
-
 }
+
 
 //make new class BookService under bookapplication
 package bookapplication;
@@ -152,7 +157,43 @@ public class BookService {
 		
 	}
 	
-	
+	public static void bookUpdate() {
+    	
+    	boolean flag=false;
+    	System.out.println("Enter the book id you want to replace");
+    	int id=sc.nextInt();
+    	
+    	for(int i=0 ; i<index ; i++) {
+    		if(id==book[i].getBookId()) {
+    			
+    			
+    			sc.nextLine();
+    			System.out.println("Enter the New Book Name : ");
+    			String bname = sc.nextLine();
+    			
+    			System.out.println("Enter New Book Price : ");
+    			double bprice = sc.nextDouble();
+    			
+//    			book[i].setBookName(bname); //using setter methods
+//    			book[i].setBookPrice(bprice);
+//    			
+    			
+    			book[i] = new Book(id, bname, bprice);
+    			flag=true;
+    			
+    			
+    		}
+    	}
+    	
+    	if(flag==true) {
+    		System.out.println("Book is updated successfully !");
+    	}
+    	else
+    		System.out.println("Book id " + id + " not found ! ");
+    	
+    	
+    }
+		
 	
 }
 
