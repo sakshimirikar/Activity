@@ -11,7 +11,7 @@ class TaxCalculator {
 	boolean isIndian=false;
 	double empSal;
 	
-	//using constructor to construct values of object 
+	//using constructor to construct values object
 	TaxCalculator(String empName ,  double empSal , boolean isIndian){
 		this.empName=empName;
 		this.isIndian=isIndian;
@@ -26,8 +26,8 @@ class TaxCalculator {
 			  
 			if (isIndian==true){
 				 
-//				if(empName != null && empName != "")
-				if(empName.equals(null) && empName.equals(" "))
+				if(empName != null && empName != "")
+//				if(empName.equals(null) && empName.equals(" "))
 				{
 					if(empSal>100000 && isIndian==true) {
 						taxAmount=empSal*8/100;				
@@ -35,7 +35,7 @@ class TaxCalculator {
 					else if(empSal>=50000 && empSal<=100000 && isIndian==true) {
 						taxAmount=empSal*6/100;
 					}
-					else if(empSal<=30000 && empSal<=50000 && isIndian==true) {
+					else if(empSal>=30000 && empSal<=50000 && isIndian==true) {
 						taxAmount=empSal*5/100;
 						
 					}
@@ -109,6 +109,8 @@ public class Calculator {
 	}
 
 }
+
+
 
 //making seperate class to handle exceptions
 
