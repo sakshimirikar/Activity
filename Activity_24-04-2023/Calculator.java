@@ -1,6 +1,3 @@
-//Question :  Develop a simple java application to calculate the tax for a particular employee based on his salary
-
-
 package ExceptionHandling;
 
 import java.util.Scanner;
@@ -92,61 +89,22 @@ public class Calculator {
 			
 			
 		}
-		catch(CountryNotValidException e){
+		
+		catch(CountryNotValidException  | EmployeeNameInvalidException | TaxNotEligibleException e ){
+			System.out.println();
 			System.out.println(e.getMessage());
 			
 		}
-		catch(EmployeeNameInvalidException e) {
-			System.out.println(e.getMessage());
-		}
+//		catch(EmployeeNameInvalidException e) {
+//			System.out.println(e.getMessage());
+//		}
+//		
+//		catch(TaxNotEligibleException e) {
+//			System.out.println(e.getMessage());
+//		}
 		
-		catch(TaxNotEligibleException e) {
-			System.out.println(e.getMessage());
-		}
-		
 
 
-	}
-
-}
-
-
-
-//making seperate class to handle exceptions
-
-//class for CountryNotValidException  exception
-
-package ExceptionHandling;
-
-public class CountryNotValidException extends Exception {
-	
-	public CountryNotValidException(String message) {
-		super(message);
-	}
-  
-}
-
-
-// class for EmployeeNameInvalidException exception
-
-package ExceptionHandling;
-
-public class EmployeeNameInvalidException extends Exception {
-	
-	public EmployeeNameInvalidException(String message) {
-		super(message);
-	}
-
-}
-
-//class TaxNotEligibleException exception
-
-package ExceptionHandling;
-
-public class TaxNotEligibleException extends Exception{
-	
-	public TaxNotEligibleException(String message) {
-		super(message);
 	}
 
 }
