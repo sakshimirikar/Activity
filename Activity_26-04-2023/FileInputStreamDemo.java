@@ -9,7 +9,7 @@ public class FileInputStreamDemo {
 	public static void main(String[] args) {
 		
 		try {
-			FileInputStream fis = new FileInputStream("D:/JAVA Training/Notes//demo.txt");
+			FileInputStream fis = new FileInputStream("D:/JAVA Training/Notes//demo.txt"); //create new txt documenet demo.txt -> copy the location and paste here.
 			
 			System.out.println("Remaining bytes : " + fis.available());
 			int i; //['w' , 'e' , '1' , ...]
