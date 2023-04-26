@@ -10,7 +10,7 @@ public class FileOutputStreamDemo {
 	public static void main(String[] args) {
 		
 		try {
-			FileOutputStream fos = new FileOutputStream("D:/JAVA Training/Notes//demo.txt");
+			FileOutputStream fos = new FileOutputStream("D:/JAVA Training/Notes//demo.txt"); //create new txt documenet demo.txt -> copy the location and paste here.
 			
 //			fos.write(65);
 			
